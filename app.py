@@ -4,8 +4,6 @@ import preprocessor,helper
 import matplotlib.pyplot as plt 
 
 st.set_page_config(page_title='Whatsapp Chat Analyzer',page_icon='🔍')
-st.caption('Author: The Elucidate')
-st.caption('Linkedin: [Jay Jain](https://www.linkedin.com/in/jayjain6865)'+'  \n '
 st.sidebar.title('Whatsapp Chat Analyzer')
 
 df = None
