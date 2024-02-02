@@ -1,0 +1,2 @@
+Export chat from whatsapp and save in dataset folder
+Make sure to change file location in jupyter notebook file and python file as required
