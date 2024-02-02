@@ -10,7 +10,7 @@ def preprocess_android(data):
     df = pd.DataFrame({'user_message':messages, 'message_date': dates})
     df['message_date'] = pd.to_datetime(df['message_date'])
 
-    df['user_message'].replace(to_replace=r'^\u202f(PM|AM) - ',value='',regex=True,inplace=True)
+    df['user_message'].replace(to_replace=r'^\u202f(PM|AM|am|pm) - ',value='',regex=True,inplace=True)
 
 
     users = []
@@ -43,7 +43,7 @@ def preprocess_ios(data):
     df = pd.DataFrame({'user_message':messages, 'message_date': dates})
     df['message_date'].replace(to_replace=r'\[',value='',inplace=True,regex=True)
     df['message_date'] = pd.to_datetime(df['message_date'])
-    df['user_message'].replace(to_replace=r'\u202f(PM|AM)]',value='',regex=True,inplace=True)
+    df['user_message'].replace(to_replace=r'\u202f(PM|AM|am|pm)]',value='',regex=True,inplace=True)
 
 
     users = []
