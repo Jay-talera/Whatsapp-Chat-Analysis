@@ -3,7 +3,12 @@ import time
 import preprocessor,helper
 import matplotlib.pyplot as plt 
 
-# st.sidebar.title('Whatsapp Chat Analyzer')
+st.set_page_config(page_title='Whatsapp Chat Analyzer',page_icon='🔍')
+st.caption('Author: The Elucidate')
+st.caption('Linkedin: [Jay Jain](https://www.linkedin.com/in/jayjain6865)'+'  \n '
+st.divider()
+
+st.sidebar.title('Whatsapp Chat Analyzer')
 
 df = None
 device_type = None
