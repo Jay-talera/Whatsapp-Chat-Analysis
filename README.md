@@ -1,7 +1,9 @@
 # Whatsapp-Chat-Analysis
  
 ---
-<a href='https://whatsapp-chat-analysis-by-jay-jain.streamlit.app'>
+  <a href="https://whatsapp-chat-analysis-by-jay-jain.streamlit.app">
+    <img src="https://img.shields.io/badge/Try%20on%20streamlit-blue?style=for-the-badge&logo=streamlit&logoColor=white%22%20alt=%22LinkedIn%20Badge"/>
+  </a>
 ---
 
 <div id="header" align="center">
