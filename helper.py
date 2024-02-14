@@ -42,9 +42,19 @@ def create_wordcloud(selected_user,df):
     if selected_user != 'Overall':
         df = df[df['user']==selected_user]
     wc = WordCloud(width=500,height=100,min_font_size=10,background_color='white',font_path='font/gargi.ttf')
-    df = df[df['message']!='<Media omitted>\n']
-    df = df[df['message'] != '\u200eimage omitted\n']
-    df = df[df['message']!='\u200esticker omitted\n']
+    # df = df[df['message']!='<Media omitted>\n']
+    # df = df[df['message'] != '\u200eimage omitted\n']
+    # df = df[df['message']!='\u200esticker omitted\n']
 
+    x = df['message'].str.extract('(omitted)')
+    x.rename(columns=
+            {
+                0:'a'
+            },inplace=True)
+    x.dropna(inplace=True)    
+
+    for i in x.index:
+        df.drop(index=i,inplace=True)
+    
     df_wc = wc.generate(df['message'].str.cat(sep=" "))
     return df_wc
